@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+<meta name="theme-color" content="#1A3FA7" />
+<title>블로그, 왜 아직 안 하시나요? | 컨빌디자인 블로그 대행</title>
+<meta name="description" content="시공사 전용 블로그 마케팅 대행. 인테리어 분야 전문, 검색 상위노출과 문의 전환을 만드는 성과형 글쓰기. 전화 010-7204-8009." />
+<meta property="og:title" content="블로그, 왜 아직 안 하시나요? | 컨빌디자인" />
+<meta property="og:description" content="시공을 잘해도, 보여주지 않으면 아무도 모릅니다. 컨빌이 만드는 시공사 전용 블로그 마케팅." />
+<meta property="og:type" content="website" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+<link rel="stylesheet" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+<!--
+=========================================================================
+  쉽게 수정하는 곳
+=========================================================================
+  ① 전화번호 (3곳): "010-7204-8009" / "01072048009" 검색 후 일괄 변경
+  ② 외부 채널 링크: <a class="ch-link"> 와 footer <a> 태그
+  ③ 컬러 토큰: 아래 :root 안의 --c-* 변수
+=========================================================================
+-->
+
+<style>
+:root{
+  --c-blue:#1A3FA7;
+  --c-blue-deep:#13307F;
+  --c-blue-soft:#EEF2FB;
+  --c-red:#E63946;
+  --c-red-soft:#FDECEE;
+  --c-yellow:#FFD60A;
+  --c-yellow-soft:#FFF8D1;
+  --c-ink:#0F1115;
+  --c-ink-2:#202329;
+  --c-text:#1F2329;
+  --c-muted:#5A6271;
+  --c-line:#E6E8EE;
+  --c-bg:#FFFFFF;
+  --c-bg-soft:#F7F8FA;
+  --shadow-sm:0 2px 8px rgba(15,17,21,.06);
+  --shadow-md:0 12px 32px rgba(15,17,21,.10);
+  --shadow-lg:0 24px 60px rgba(15,17,21,.14);
+  --radius-sm:8px;
+  --radius:14px;
+  --radius-lg:22px;
+  --max:1120px;
+  --gutter:20px;
+  --font:'Pretendard Variable','Pretendard',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo',sans-serif;
+}
+
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{
+  margin:0;
+  font-family:var(--font);
+  font-weight:500;
+  color:var(--c-text);
+  background:var(--c-bg);
+  line-height:1.6;
+  letter-spacing:-.01em;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:0;background:none}
+
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.section{padding:88px 0;position:relative}
+.section--soft{background:var(--c-bg-soft)}
+.section--blue{background:var(--c-blue);color:#fff}
+.section--ink{background:var(--c-ink);color:#fff}
+.eyebrow{
+  display:inline-block;
+  font-size:13px;font-weight:700;letter-spacing:.04em;
+  color:var(--c-blue);
+  background:var(--c-blue-soft);
+  padding:6px 12px;border-radius:999px;
+  margin-bottom:18px;
+}
+.section--blue .eyebrow{color:#fff;background:rgba(255,255,255,.16)}
+.section--ink .eyebrow{color:var(--c-yellow);background:rgba(255,214,10,.12)}
+
+h1,h2,h3,h4{font-weight:800;letter-spacing:-.025em;line-height:1.25;margin:0 0 18px}
+.h-display{font-size:clamp(34px,6.4vw,64px);font-weight:900;line-height:1.15;letter-spacing:-.035em}
+.h-section{font-size:clamp(26px,3.6vw,40px);font-weight:800;line-height:1.25}
+.h-card{font-size:20px;font-weight:800}
+.lead{font-size:clamp(16px,1.7vw,20px);color:var(--c-muted);font-weight:500}
+.section--blue .lead,.section--ink .lead{color:rgba(255,255,255,.8)}
+strong.hl{
+  background:linear-gradient(180deg,transparent 60%,var(--c-yellow) 60%);
+  padding:0 2px;
+  font-weight:800;
+}
+.section--blue strong.hl,.section--ink strong.hl{
+  background:linear-gradient(180deg,transparent 60%,rgba(255,214,10,.85) 60%);
+  color:inherit;
+}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  height:56px;padding:0 26px;
+  border-radius:14px;
+  font-size:17px;font-weight:800;letter-spacing:-.01em;
+  transition:transform .15s ease,box-shadow .2s ease,background .2s ease;
+  white-space:nowrap;
+}
+.btn--primary{background:var(--c-blue);color:#fff;box-shadow:var(--shadow-md)}
+.btn--primary:hover{background:var(--c-blue-deep);transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.btn--ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5)}
+.btn--ghost:hover{background:rgba(255,255,255,.08)}
+.btn--accent{background:var(--c-yellow);color:var(--c-ink)}
+.btn--accent:hover{background:#FFE860;transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.btn--xl{height:68px;padding:0 36px;font-size:19px;border-radius:18px}
+
+/* ---------- Top nav ---------- */
+.nav{
+  position:sticky;top:0;z-index:80;
+  background:rgba(255,255,255,.86);backdrop-filter:saturate(180%) blur(14px);
+  border-bottom:1px solid var(--c-line);
+}
+.nav__inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;color:var(--c-ink);font-size:17px}
+.brand__dot{width:22px;height:22px;border-radius:50%;background:var(--c-blue);display:inline-block}
+.nav__cta{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--c-ink);color:#fff;
+  padding:10px 16px;border-radius:999px;font-weight:800;font-size:14px;
+}
+.nav__cta:hover{background:var(--c-blue)}
+
+/* Desktop menu */
+.nav__menu{display:none;align-items:center;gap:6px;margin:0 8px 0 auto}
+@media(min-width:880px){.nav__menu{display:flex}}
+.nav__menu a{
+  position:relative;
+  padding:8px 14px;border-radius:8px;
+  font-weight:700;font-size:14.5px;color:var(--c-text);
+  transition:color .15s ease,background .15s ease;
+}
+.nav__menu a:hover{color:var(--c-blue);background:var(--c-blue-soft)}
+.nav__menu a.is-active{color:var(--c-blue)}
+.nav__menu a.is-active::after{
+  content:'';position:absolute;left:14px;right:14px;bottom:2px;
+  height:2px;background:var(--c-blue);border-radius:2px;
+}
+
+/* Mobile hamburger */
+.nav__burger{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:40px;height:40px;border-radius:10px;
+  background:transparent;color:var(--c-ink);
+}
+.nav__burger:hover{background:var(--c-bg-soft)}
+@media(min-width:880px){.nav__burger{display:none}}
+
+/* Mobile order: brand --- (CTA) (burger=rightmost) */
+@media(max-width:879px){
+  .nav__cta{order:2;margin-left:auto}
+  .nav__burger{order:3;margin-left:6px}
+}
+
+/* Mobile drawer */
+.nav__drawer{
+  position:fixed;left:0;right:0;top:64px;z-index:79;
+  background:#fff;border-bottom:1px solid var(--c-line);
+  box-shadow:var(--shadow-md);
+  transform:translateY(-12px);opacity:0;pointer-events:none;
+  transition:transform .2s ease,opacity .2s ease;
+}
+.nav__drawer.is-open{transform:none;opacity:1;pointer-events:auto}
+.nav__drawer ul{list-style:none;margin:0;padding:8px 0}
+.nav__drawer a{
+  display:block;padding:14px 22px;
+  font-weight:700;font-size:16px;color:var(--c-text);
+  border-left:3px solid transparent;
+}
+.nav__drawer a:hover,.nav__drawer a.is-active{
+  color:var(--c-blue);background:var(--c-blue-soft);border-left-color:var(--c-blue);
+}
+@media(min-width:880px){.nav__drawer{display:none}}
+
+/* ---------- Hero ---------- */
+.hero{
+  padding:88px 0 96px;
+  background:radial-gradient(1200px 500px at 70% -10%, rgba(26,63,167,.08), transparent 60%) , #fff;
+  position:relative;overflow:hidden;
+}
+.hero .wrap{position:relative;z-index:1}
+.hero__visual{
+  position:absolute;
+  top:50%;right:-40px;
+  transform:translateY(-50%);
+  width:min(620px, 54vw);
+  aspect-ratio:1/1;
+  background:url('assets/hero-visual.svg') no-repeat center/contain;
+  opacity:.65;
+  pointer-events:none;
+  z-index:0;
+  -webkit-mask-image:linear-gradient(270deg, #000 35%, rgba(0,0,0,.5) 70%, transparent 100%);
+  mask-image:linear-gradient(270deg, #000 35%, rgba(0,0,0,.5) 70%, transparent 100%);
+  animation:heroFloat 9s ease-in-out infinite alternate;
+}
+@keyframes heroFloat{
+  0%{transform:translateY(-50%) translateX(0)}
+  100%{transform:translateY(calc(-50% - 10px)) translateX(-6px)}
+}
+@media(max-width:880px){.hero__visual{display:none}}
+.hero__kicker{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:14px;font-weight:700;color:var(--c-blue);
+  background:var(--c-blue-soft);
+  padding:8px 14px;border-radius:999px;
+  margin-bottom:24px;
+}
+.hero__kicker .dot{width:8px;height:8px;border-radius:50%;background:var(--c-red);box-shadow:0 0 0 4px rgba(230,57,70,.18);animation:pulse 1.6s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 8px rgba(230,57,70,0)}}
+.hero h1{margin-bottom:22px}
+.hero h1 .em{color:var(--c-blue)}
+.hero__sub{font-size:clamp(16px,1.9vw,22px);color:var(--c-muted);margin:0 0 36px;max-width:680px;line-height:1.6}
+.hero__cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:48px}
+.trust{display:flex;flex-wrap:wrap;gap:10px}
+.trust__chip{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;border:1px solid var(--c-line);
+  padding:10px 14px;border-radius:999px;font-size:14px;font-weight:600;color:var(--c-text);
+  box-shadow:var(--shadow-sm);
+}
+.trust__chip strong{color:var(--c-blue);font-weight:800}
+.scroll-cue{
+  position:absolute;left:50%;bottom:24px;transform:translateX(-50%);
+  font-size:12px;color:var(--c-muted);font-weight:600;
+  display:flex;flex-direction:column;align-items:center;gap:6px;
+  opacity:.7;
+}
+.scroll-cue svg{animation:bounce 1.6s ease-in-out infinite}
+@keyframes bounce{50%{transform:translateY(6px)}}
+
+/* ---------- Problem journey ---------- */
+.journey{
+  display:grid;grid-template-columns:1fr;gap:14px;margin:32px 0 28px;
+}
+@media(min-width:760px){.journey{grid-template-columns:1fr auto 1fr auto 1fr;align-items:center}}
+.journey__step{
+  background:#fff;border:1px solid var(--c-line);border-radius:var(--radius);
+  padding:22px 20px;text-align:center;box-shadow:var(--shadow-sm);
+}
+.journey__step .num{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:32px;height:32px;border-radius:50%;background:var(--c-blue);color:#fff;
+  font-weight:800;font-size:14px;margin-bottom:10px;
+}
+.journey__step h4{font-size:17px;margin:0 0 4px;font-weight:800}
+.journey__step p{margin:0;color:var(--c-muted);font-size:14px}
+.journey__arrow{
+  display:none;color:var(--c-line);
+}
+@media(min-width:760px){.journey__arrow{display:inline-flex}}
+.warning-box{
+  background:var(--c-red-soft);
+  border-left:4px solid var(--c-red);
+  border-radius:0 var(--radius) var(--radius) 0;
+  padding:22px 24px;
+  margin:24px 0 8px;
+}
+.warning-box strong{color:var(--c-red)}
+.pin-line{
+  display:flex;gap:12px;align-items:flex-start;
+  margin-top:28px;padding-top:24px;border-top:1px dashed var(--c-line);
+}
+.pin-line svg{flex:0 0 auto;color:var(--c-red);margin-top:2px}
+.pin-line p{margin:0;font-size:18px;font-weight:700}
+.pin-line p .em{color:var(--c-blue)}
+
+/* ---------- Why Blog ---------- */
+.kw-chips{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 28px}
+.kw-chip{
+  background:#fff;border:1px solid var(--c-line);
+  padding:10px 14px;border-radius:10px;font-size:14px;font-weight:600;
+  box-shadow:var(--shadow-sm);color:var(--c-text);
+}
+.kw-chip::before{content:'🔍';margin-right:6px}
+.checks{display:grid;grid-template-columns:1fr;gap:10px;margin:0 0 32px;list-style:none;padding:0}
+@media(min-width:760px){.checks{grid-template-columns:1fr 1fr}}
+.checks li{
+  display:flex;gap:12px;align-items:flex-start;
+  background:#fff;border:1px solid var(--c-line);
+  padding:18px 20px;border-radius:var(--radius);
+}
+.checks li svg{flex:0 0 auto;color:var(--c-blue);margin-top:2px}
+.checks li b{display:block;font-weight:800;margin-bottom:2px}
+.checks li span{color:var(--c-muted);font-size:14px}
+.bigstat{
+  display:flex;flex-direction:column;align-items:flex-start;gap:8px;
+  background:#fff;border-radius:var(--radius-lg);
+  padding:36px 32px;border:1px solid var(--c-line);
+  box-shadow:var(--shadow-md);
+  position:relative;overflow:hidden;
+}
+.bigstat::before{
+  content:'';position:absolute;inset:auto -40px -40px auto;
+  width:220px;height:220px;border-radius:50%;
+  background:var(--c-yellow);opacity:.18;
+}
+.bigstat__num{
+  font-size:clamp(64px,9vw,108px);font-weight:900;line-height:1;letter-spacing:-.04em;
+  background:linear-gradient(180deg,var(--c-ink) 0%,var(--c-ink) 60%,var(--c-yellow) 60%,var(--c-yellow) 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  position:relative;z-index:1;
+}
+.bigstat__cap{font-size:18px;color:var(--c-text);font-weight:700;position:relative;z-index:1}
+.bigstat__cap small{display:block;font-weight:500;color:var(--c-muted);font-size:14px;margin-top:4px}
+
+/* ---------- Value (blue inverted) ---------- */
+.value-grid{display:grid;grid-template-columns:1fr;gap:16px;margin:32px 0}
+@media(min-width:760px){.value-grid{grid-template-columns:repeat(3,1fr)}}
+.value-card{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:var(--radius);
+  padding:26px 24px;
+  backdrop-filter:blur(8px);
+}
+.value-card__num{font-size:32px;font-weight:900;color:var(--c-yellow);margin-bottom:8px;letter-spacing:-.02em}
+.value-card h3{color:#fff;font-size:18px;margin:0 0 6px}
+.value-card p{margin:0;color:rgba(255,255,255,.78);font-size:14px}
+.quote-line{
+  margin-top:32px;
+  font-size:clamp(20px,2.6vw,30px);
+  font-weight:800;color:#fff;line-height:1.4;
+  border-left:3px solid var(--c-yellow);
+  padding-left:18px;
+}
+
+/* ---------- Why Agency ---------- */
+.swap-row{display:grid;grid-template-columns:1fr;gap:16px;margin:30px 0}
+@media(min-width:900px){.swap-row{grid-template-columns:repeat(3,1fr)}}
+.swap-card{
+  background:#fff;border:1px solid var(--c-line);border-radius:var(--radius);
+  padding:24px;
+  position:relative;
+}
+.swap-card h4{margin:0 0 14px;font-size:18px}
+.swap-row__line{
+  display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;
+  padding:10px 12px;border-radius:10px;margin-bottom:8px;
+}
+.swap-row__line--bad{background:#FBE9EB;color:#9A1C26}
+.swap-row__line--good{background:var(--c-blue-soft);color:var(--c-blue)}
+.swap-row__line svg{flex:0 0 auto}
+.callout-quote{
+  margin-top:18px;
+  background:#fff;border:1px solid var(--c-line);
+  border-radius:var(--radius);
+  padding:24px 26px;font-weight:700;font-size:18px;
+  display:flex;gap:14px;align-items:flex-start;
+  box-shadow:var(--shadow-sm);
+}
+.callout-quote svg{color:var(--c-yellow);flex:0 0 auto}
+
+/* ---------- Comparison table ---------- */
+.cmp{
+  margin:30px 0 0;
+  border:1px solid var(--c-line);
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  background:#fff;
+  box-shadow:var(--shadow-sm);
+}
+.cmp__head{display:grid;grid-template-columns:1fr 1fr;background:var(--c-bg-soft)}
+.cmp__head > div{padding:18px 22px;font-weight:800;font-size:15px;color:var(--c-muted)}
+.cmp__head > div:last-child{background:var(--c-blue);color:#fff;font-size:16px}
+.cmp__row{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--c-line)}
+.cmp__row > div{padding:18px 22px;font-size:15px;line-height:1.5}
+.cmp__row > div:first-child{color:var(--c-muted);background:#fff;text-decoration:line-through;text-decoration-color:rgba(154,28,38,.35)}
+.cmp__row > div:last-child{background:var(--c-blue-soft);color:var(--c-blue);font-weight:700}
+.cmp__row > div:last-child::before{content:'✓ ';font-weight:900}
+
+/* ---------- Self proof ---------- */
+.channels{display:grid;grid-template-columns:1fr;gap:16px;margin:30px 0}
+@media(min-width:760px){.channels{grid-template-columns:repeat(3,1fr)}}
+.ch-card{
+  background:#fff;border:1px solid var(--c-line);border-radius:var(--radius-lg);
+  padding:26px;display:flex;flex-direction:column;gap:10px;
+  transition:transform .2s ease,box-shadow .2s ease;
+  position:relative;overflow:hidden;
+}
+.ch-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.ch-card__icon{
+  width:44px;height:44px;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;font-weight:900;
+}
+.ch-card--yt .ch-card__icon{background:#FF0033}
+.ch-card--ig .ch-card__icon{background:linear-gradient(135deg,#F58529 0%,#DD2A7B 50%,#8134AF 100%)}
+.ch-card--blog .ch-card__icon{background:#03C75A}
+.ch-card h3{margin:0;font-size:18px}
+.ch-card p{margin:0;font-size:14px;color:var(--c-muted)}
+.ch-card .ch-stat{font-weight:800;color:var(--c-ink);font-size:15px}
+.ch-card .ch-link{
+  margin-top:6px;color:var(--c-blue);font-weight:700;font-size:14px;
+  display:inline-flex;align-items:center;gap:4px;
+}
+
+.proof-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:14px}
+@media(min-width:900px){.proof-grid{grid-template-columns:1fr 1fr}}
+.proof-card{
+  background:var(--c-yellow-soft);
+  border:1px solid #F4DC6B;
+  border-radius:var(--radius-lg);
+  padding:28px;
+}
+.proof-card .num{font-size:44px;font-weight:900;letter-spacing:-.03em;color:var(--c-ink);margin-bottom:6px;line-height:1}
+.proof-card .num em{color:var(--c-blue);font-style:normal}
+.proof-card p{margin:0;font-weight:700}
+.proof-card small{color:var(--c-muted);font-weight:500;display:block;margin-top:4px}
+
+.chart{
+  margin-top:36px;background:#fff;border:1px solid var(--c-line);border-radius:var(--radius-lg);
+  padding:28px;box-shadow:var(--shadow-sm);
+}
+.chart h4{margin:0 0 6px;font-size:17px}
+.chart small{color:var(--c-muted);font-size:13px}
+.chart__rows{margin-top:22px;display:flex;flex-direction:column;gap:18px}
+.bar{display:grid;grid-template-columns:80px 1fr 60px;align-items:center;gap:12px}
+.bar__label{font-weight:800;font-size:14px}
+.bar__track{height:32px;background:#F2F4F8;border-radius:8px;overflow:hidden;position:relative}
+.bar__fill{
+  height:100%;border-radius:8px;
+  width:0;
+  transition:width 1.4s cubic-bezier(.2,.7,.2,1);
+}
+.bar--yt .bar__fill{background:linear-gradient(90deg,#FF6680,#FF0033)}
+.bar--blog .bar__fill{background:linear-gradient(90deg,#1A3FA7,#7E9CF4)}
+.bar__num{font-weight:900;font-size:18px;text-align:right}
+.chart__note{margin-top:18px;font-size:13px;color:var(--c-muted)}
+
+/* ---------- Cases ---------- */
+.cases{display:grid;grid-template-columns:1fr;gap:16px;margin-top:32px}
+@media(min-width:760px){.cases{grid-template-columns:1fr 1fr}}
+@media(min-width:1080px){.cases{grid-template-columns:1fr 1fr 1fr}}
+.case{
+  background:#fff;border:1px solid var(--c-line);border-radius:var(--radius-lg);
+  padding:24px;display:flex;flex-direction:column;gap:14px;
+  transition:transform .2s ease,box-shadow .2s ease;
+  position:relative;
+}
+.case:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.case__head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.case__title{font-size:17px;font-weight:800;line-height:1.4;margin:0}
+.case__badge{
+  background:var(--c-red);color:#fff;
+  font-weight:900;font-size:12px;letter-spacing:.04em;
+  padding:6px 10px;border-radius:8px;flex:0 0 auto;
+}
+.case__kw{display:flex;flex-direction:column;gap:6px;margin:0;padding:0;list-style:none}
+.case__kw li{
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:13.5px;
+  padding:8px 12px;background:var(--c-bg-soft);border-radius:8px;
+}
+.case__kw .rank{font-weight:900;color:var(--c-red);font-size:13px}
+.case__kw .rank--top{color:var(--c-blue)}
+.case__link{
+  margin-top:auto;color:var(--c-blue);font-weight:700;font-size:13px;
+  display:inline-flex;align-items:center;gap:4px;
+}
+
+/* ---------- Final CTA ---------- */
+.final{padding:120px 0;text-align:center}
+.final h2{color:#fff;margin-bottom:14px}
+.final .lead{color:rgba(255,255,255,.78);max-width:640px;margin:0 auto 36px}
+.final__phone{
+  font-size:clamp(40px,7vw,84px);font-weight:900;letter-spacing:-.03em;
+  background:linear-gradient(180deg,#fff 30%,var(--c-yellow) 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  margin:0 0 28px;
+  line-height:1;
+}
+.final__cta{display:inline-flex}
+.final__last{margin-top:34px;color:rgba(255,255,255,.72);font-size:14px;max-width:520px;margin-left:auto;margin-right:auto}
+
+/* ---------- Footer ---------- */
+.footer{background:#0A0B0F;color:rgba(255,255,255,.7);padding:48px 0}
+.footer__top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;margin-bottom:24px}
+.footer__brand{font-size:18px;font-weight:900;color:#fff;display:flex;align-items:center;gap:10px}
+.footer__brand .brand__dot{background:var(--c-yellow)}
+.footer__links{display:flex;flex-wrap:wrap;gap:18px;font-size:14px}
+.footer__links a:hover{color:#fff}
+.footer__bottom{font-size:12.5px;color:rgba(255,255,255,.45);border-top:1px solid rgba(255,255,255,.08);padding-top:20px}
+
+/* ---------- Sticky mobile CTA ---------- */
+.sticky-cta{
+  position:fixed;left:12px;right:12px;bottom:14px;z-index:90;
+  background:var(--c-ink);color:#fff;
+  border-radius:14px;padding:14px 18px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  box-shadow:0 12px 32px rgba(15,17,21,.32);
+  transform:translateY(120%);transition:transform .3s ease;
+}
+.sticky-cta.is-on{transform:translateY(0)}
+.sticky-cta__num{font-weight:900;font-size:16px}
+.sticky-cta__num small{display:block;font-weight:600;font-size:11px;color:rgba(255,255,255,.7);margin-bottom:2px}
+.sticky-cta__btn{
+  background:var(--c-yellow);color:var(--c-ink);
+  font-weight:900;font-size:14px;
+  padding:10px 14px;border-radius:10px;
+  display:inline-flex;align-items:center;gap:6px;
+}
+@media(min-width:900px){.sticky-cta{display:none}}
+
+/* ---------- Reveal on scroll ---------- */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.is-in{opacity:1;transform:none}
+
+/* ---------- Small screens fine-tune ---------- */
+@media(max-width:600px){
+  .section{padding:64px 0}
+  .hero{padding:56px 0 76px}
+  .nav__cta span{display:none}
+  .nav__cta{padding:10px 12px}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================ NAV -->
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a href="#top" class="brand">
+      <span class="brand__dot"></span>
+      컨빌디자인
+    </a>
+
+    <nav class="nav__menu" aria-label="섹션 이동">
+      <a href="#why-blog" data-link>왜 블로그?</a>
+      <a href="#why-convil" data-link>컨빌 차별점</a>
+      <a href="#proof" data-link>자체 채널</a>
+      <a href="#cases" data-link>실제 사례</a>
+    </nav>
+
+    <button class="nav__burger" id="navBurger" aria-label="메뉴 열기" aria-expanded="false" aria-controls="navDrawer">
+      <svg id="burgerIcon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+    </button>
+
+    <a href="tel:01072048009" class="nav__cta" aria-label="전화 상담 010-7204-8009">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+      <span>010-7204-8009</span>
+    </a>
+  </div>
+
+  <div class="nav__drawer" id="navDrawer" hidden>
+    <ul>
+      <li><a href="#why-blog" data-link>왜 블로그?</a></li>
+      <li><a href="#why-convil" data-link>컨빌 차별점</a></li>
+      <li><a href="#proof" data-link>자체 채널</a></li>
+      <li><a href="#cases" data-link>실제 사례</a></li>
+      <li><a href="#cta" data-link>지금 문의하기</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============================================================ HERO -->
+<section class="hero">
+  <div class="hero__visual" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero__kicker"><span class="dot"></span> 시공사 전용 블로그 마케팅 대행</div>
+    <h1 class="h-display reveal">
+      블로그,<br/>왜 <span class="em">아직</span> 안 하시나요?
+    </h1>
+    <p class="hero__sub reveal">시공을 잘해도, 보여주지 않으면 아무도 모릅니다.<br/>
+      대표님이 현장에 계실 때, 블로그가 대신 고객을 데려옵니다.</p>
+    <div class="hero__cta reveal">
+      <a href="tel:01072048009" class="btn btn--primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+        지금 전화 상담받기 · 010-7204-8009
+      </a>
+      <a href="#cases" class="btn btn--ghost" style="color:var(--c-ink);border-color:var(--c-line)">실제 사례 먼저 보기 →</a>
+    </div>
+    <div class="trust reveal">
+      <span class="trust__chip">상업공간 <strong>360건+</strong> 디자인</span>
+      <span class="trust__chip">인스타 팔로워 <strong>1만+</strong></span>
+      <span class="trust__chip">유튜브 <strong>‘상가인테리어의 비밀노트’</strong> 운영</span>
+    </div>
+  </div>
+  <div class="scroll-cue">
+    <span>스크롤</span>
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+  </div>
+</section>
+
+<!-- ============================================================ PROBLEM -->
+<section class="section">
+  <div class="wrap">
+    <span class="eyebrow reveal">💡 PROBLEM</span>
+    <h2 class="h-section reveal">
+      “현장은 잘 하는데,<br/>홍보는 어렵다.”
+    </h2>
+    <p class="lead reveal" style="max-width:680px">대부분의 시공사 대표님이 공통으로 하시는 말씀입니다.<br/>
+      현장은 완벽하게 마무리해도, 정작 검색에서는 <strong class="hl">아무도 그 결과를 보지 못합니다.</strong></p>
+
+    <div class="journey reveal">
+      <div class="journey__step">
+        <span class="num">1</span>
+        <h4>네이버에서 검색</h4>
+        <p>“○○ 인테리어 후기”, “○○ 잘하는 곳”</p>
+      </div>
+      <div class="journey__arrow"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      <div class="journey__step">
+        <span class="num">2</span>
+        <h4>블로그 포트폴리오 확인</h4>
+        <p>시공 과정·현장 진심을 글에서 확인</p>
+      </div>
+      <div class="journey__arrow"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      <div class="journey__step">
+        <span class="num">3</span>
+        <h4>전화·연락 시작</h4>
+        <p>마음을 정한 뒤 비로소 문의</p>
+      </div>
+    </div>
+
+    <div class="warning-box reveal">
+      <strong>그런데 블로그가 없거나 방치돼 있다면?</strong><br/>
+      그 순간 고객은 망설임 없이 다른 업체를 선택합니다.
+    </div>
+
+    <div class="pin-line reveal">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+      <p>현장 기술은 <span class="em">이미</span> 있으시죠? 이제 <span class="em">보여줄 무대</span>만 만드시면 됩니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ WHY BLOG -->
+<section id="why-blog" class="section section--soft">
+  <div class="wrap">
+    <span class="eyebrow reveal">🔍 WHY BLOG</span>
+    <h2 class="h-section reveal">고객은 인스타보다<br/><strong class="hl">블로그</strong>에서 결정합니다.</h2>
+    <p class="lead reveal" style="max-width:720px">요즘 고객은 단순히 예쁜 결과물을 보고 결정하지 않습니다.<br/>그 시공사가 어떤 마음으로 일하는지, 얼마나 진심인지까지 확인하고 싶어 합니다.</p>
+
+    <div class="kw-chips reveal">
+      <span class="kw-chip">진주 식당 인테리어 후기</span>
+      <span class="kw-chip">창원 카페 리모델링 믿을만한 곳</span>
+      <span class="kw-chip">서울 인테리어 업체 추천</span>
+      <span class="kw-chip">강남 사무실 인테리어</span>
+    </div>
+
+    <ul class="checks reveal">
+      <li>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        <div><b>시공 과정</b><span>어떤 순서로, 얼마나 정성껏 진행했는지</span></div>
+      </li>
+      <li>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        <div><b>공사 전후의 변화</b><span>비포·애프터로 보여주는 신뢰감</span></div>
+      </li>
+      <li>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        <div><b>마감의 꼼꼼함</b><span>대표·팀이 디테일을 어떻게 챙기는지</span></div>
+      </li>
+      <li>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        <div><b>고객 이야기 반영</b><span>요청을 어떻게 듣고 풀어냈는지</span></div>
+      </li>
+    </ul>
+
+    <div class="bigstat reveal">
+      <div class="bigstat__num">73%</div>
+      <div class="bigstat__cap">
+        전체 고객의 73% 이상이 ‘검색을 통해’ 시공업체를 선택합니다.
+        <small>그중 대부분은 블로그를 확인한 뒤 문의를 남깁니다.</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ VALUE (blue inverted) -->
+<section class="section section--blue">
+  <div class="wrap">
+    <span class="eyebrow reveal">⏰ VALUE</span>
+    <h2 class="h-section reveal" style="color:#fff">블로그는 디지털 현판이자,<br/><strong class="hl">24시간 일하는 직원</strong>입니다.</h2>
+    <p class="lead reveal">한 번 잘 쓴 글은 잠자는 동안에도 검색 결과 위에서 고객을 데려옵니다.</p>
+
+    <div class="value-grid reveal">
+      <div class="value-card">
+        <div class="value-card__num">180일+</div>
+        <h3>평균 노출 기간</h3>
+        <p>한 번 쓴 글이 6개월 이상 검색 결과에 꾸준히 살아남습니다.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-card__num">매일 수십 명</div>
+        <h3>자동 노출</h3>
+        <p>블로그 한 페이지가 매일 수십 명에게 자동으로 노출됩니다.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-card__num">24시간</div>
+        <h3>쉬지 않는 영업</h3>
+        <p>대표님이 현장에 계실 때도, 잠을 잘 때도 계속 영업합니다.</p>
+      </div>
+    </div>
+
+    <div class="quote-line reveal">“시공은 하루 만에 끝나지만,<br/>블로그는 6개월 동안 고객을 데려옵니다.”</div>
+  </div>
+</section>
+
+<!-- ============================================================ WHY AGENCY -->
+<section class="section">
+  <div class="wrap">
+    <span class="eyebrow reveal">✏️ WHY AGENCY</span>
+    <h2 class="h-section reveal">상위노출 되는 블로그는<br/><strong class="hl">글쓰는 법</strong>부터 다릅니다.</h2>
+    <p class="lead reveal" style="max-width:740px">사진은 많지만, 어떤 순서·구조·키워드로 써야 노출되는지 알고 쓰는 분은 거의 없습니다. 이건 감각이 아니라 ‘검색 엔진 언어(SEO Writing)’ 기술입니다.</p>
+
+    <div class="swap-row reveal">
+      <div class="swap-card">
+        <h4>① 키워드 공략</h4>
+        <div class="swap-row__line swap-row__line--bad">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          감각으로 “공사했습니다”
+        </div>
+        <div class="swap-row__line swap-row__line--good">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          전략 키워드를 분석해서 공략
+        </div>
+      </div>
+      <div class="swap-card">
+        <h4>② 검색 로직 구조</h4>
+        <div class="swap-row__line swap-row__line--bad">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          제목·본문 마음 가는 대로
+        </div>
+        <div class="swap-row__line swap-row__line--good">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          노출되는 구조에 맞춰 작성
+        </div>
+      </div>
+      <div class="swap-card">
+        <h4>③ 이미지·문단·해시태그</h4>
+        <div class="swap-row__line swap-row__line--bad">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          예쁘게만 배치
+        </div>
+        <div class="swap-row__line swap-row__line--good">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          위치·길이·태그까지 전략
+        </div>
+      </div>
+    </div>
+
+    <div class="callout-quote reveal">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/></svg>
+      <span>좋은 시공 사진만으로는 고객이 찾아오지 않습니다. <strong class="hl">고객이 클릭하는 글은 따로 있습니다.</strong></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ DIFFERENTIATION -->
+<section id="why-convil" class="section section--soft">
+  <div class="wrap">
+    <span class="eyebrow reveal">🚀 WHY CONVIL</span>
+    <h2 class="h-section reveal">그럼 왜 수많은 대행업체 중에<br/><strong class="hl">컨빌</strong>일까요?</h2>
+    <p class="lead reveal" style="max-width:680px">컨빌은 카피라이터가 아닌, <strong>현장을 이해하는 인테리어 전문가</strong>가 직접 글을 씁니다.</p>
+
+    <div class="cmp reveal">
+      <div class="cmp__head">
+        <div>일반 마케팅 대행사</div>
+        <div>컨빌디자인</div>
+      </div>
+      <div class="cmp__row">
+        <div>카페·뷰티·식당 등 모든 업종 혼합</div>
+        <div>인테리어 분야 전문</div>
+      </div>
+      <div class="cmp__row">
+        <div>현장을 모르는 카피라이터</div>
+        <div>실제 인테리어 시장을 아는 전문가</div>
+      </div>
+      <div class="cmp__row">
+        <div>일반 이미지 사용</div>
+        <div>실제 현장 사진 + 3D 이미지 활용</div>
+      </div>
+      <div class="cmp__row">
+        <div>단순 키워드 반복</div>
+        <div>시공 스토리 기반 스토리텔링</div>
+      </div>
+      <div class="cmp__row">
+        <div>일시적 노출</div>
+        <div>블로그 지수 기반 ‘지속 노출 관리’</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ SELF PROOF -->
+<section id="proof" class="section">
+  <div class="wrap">
+    <span class="eyebrow reveal">📈 PROOF</span>
+    <h2 class="h-section reveal">디자인 회사인데,<br/>마케팅을 잘하냐고요?</h2>
+    <p class="lead reveal" style="max-width:760px">저희는 오히려 현실적인 마케팅을 <strong class="hl">직접 하고 있는 팀</strong>입니다.<br/>유튜브·인스타·블로그 — 컨빌 내부에서 모든 마케팅 프로세스를 자체 실행합니다.</p>
+
+    <div class="channels reveal">
+      <a class="ch-card ch-card--yt" href="https://www.youtube.com/@convil.interior/videos" target="_blank" rel="noopener">
+        <div class="ch-card__icon">▶</div>
+        <h3>YouTube · 상가인테리어의 비밀노트</h3>
+        <p class="ch-stat">평균 5천 회+ · 일부 영상 1만 회 돌파</p>
+        <p>대표 인터뷰 시리즈 & 공간디자인 영상 지속 업데이트</p>
+        <span class="ch-link">채널 보러가기 →</span>
+      </a>
+      <a class="ch-card ch-card--ig" href="https://www.instagram.com/convil.design/" target="_blank" rel="noopener">
+        <div class="ch-card__icon">@</div>
+        <h3>Instagram · @convil.design</h3>
+        <p class="ch-stat">팔로워 1만 · 릴스 평균 3~5만 회</p>
+        <p>인테리어 트렌드 기반 숏폼 콘텐츠 직접 제작</p>
+        <span class="ch-link">계정 보러가기 →</span>
+      </a>
+      <a class="ch-card ch-card--blog" href="https://blog.naver.com/convil_interior" target="_blank" rel="noopener">
+        <div class="ch-card__icon">N</div>
+        <h3>Naver Blog · convil_interior</h3>
+        <p class="ch-stat">상위노출 다수 · 인테리어/시공사/공간디자인</p>
+        <p>키워드 분석 기반 포스팅 전략 자체 운영</p>
+        <span class="ch-link">블로그 보러가기 →</span>
+      </a>
+    </div>
+
+    <div class="proof-grid reveal">
+      <div class="proof-card">
+        <div class="num">5,000<em>회+</em></div>
+        <p>업로드 콘텐츠 대부분 5천 회 이상 조회</p>
+        <small>자체 채널 누적 데이터 기준</small>
+      </div>
+      <div class="proof-card">
+        <div class="num">20<em>건+</em></div>
+        <p>브랜딩 영상 + 블로그 글 하나로 발생한 실제 고객 문의</p>
+        <small>시공사 대행 운영 과정에서 측정</small>
+      </div>
+    </div>
+
+    <div class="chart reveal">
+      <h4>3개월간 채널별 문의 수</h4>
+      <small>총 100개 이상의 글이 쌓인 ‘준최4’ 블로그 기준</small>
+      <div class="chart__rows">
+        <div class="bar bar--yt">
+          <span class="bar__label">유튜브</span>
+          <div class="bar__track"><div class="bar__fill" data-pct="64"></div></div>
+          <span class="bar__num">16건</span>
+        </div>
+        <div class="bar bar--blog">
+          <span class="bar__label">블로그</span>
+          <div class="bar__track"><div class="bar__fill" data-pct="100"></div></div>
+          <span class="bar__num">25건</span>
+        </div>
+      </div>
+      <p class="chart__note">→ 블로그가 검색을 통한 ‘직접 문의’로 가장 강력하게 작동합니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ CASES -->
+<section id="cases" class="section section--soft">
+  <div class="wrap">
+    <span class="eyebrow reveal">🏆 CASE</span>
+    <h2 class="h-section reveal">시공사 블로그 대행 성과<br/><span style="color:var(--c-blue)">호영실내건축인테리어 사례</span></h2>
+    <p class="lead reveal">컨빌이 직접 작성·운영해 만든 실제 상위노출 결과입니다.</p>
+
+    <div class="cases reveal">
+      <article class="case">
+        <div class="case__head">
+          <h3 class="case__title">창원 산호동 애견호텔</h3>
+          <span class="case__badge">1위 4개</span>
+        </div>
+        <ul class="case__kw">
+          <li>창원 애견호텔 인테리어 <span class="rank rank--top">1위</span></li>
+          <li>창원 애견호텔 디자인 <span class="rank rank--top">1위</span></li>
+          <li>산호동 애견호텔 인테리어 <span class="rank rank--top">1위</span></li>
+          <li>애견호텔 인테리어 <span class="rank">3위</span></li>
+          <li>창원 강아지호텔 인테리어 <span class="rank">4위</span></li>
+        </ul>
+        <a class="case__link" href="https://blog.naver.com/hoyoung8000/223997946479" target="_blank" rel="noopener">원본 포스팅 보기 →</a>
+      </article>
+
+      <article class="case">
+        <div class="case__head">
+          <h3 class="case__title">창원 유도장 인테리어 (3D 시안)</h3>
+          <span class="case__badge">전 키워드 1위</span>
+        </div>
+        <ul class="case__kw">
+          <li>창원 유도장 인테리어 <span class="rank rank--top">1위</span></li>
+          <li>창원 유도장 리모델링 <span class="rank rank--top">1위</span></li>
+          <li>창원 유도장 창업 <span class="rank rank--top">1위</span></li>
+          <li>유도장 인테리어 <span class="rank rank--top">1위</span></li>
+          <li>유도장 디자인 <span class="rank rank--top">1위</span></li>
+        </ul>
+        <a class="case__link" href="https://blog.naver.com/hoyoung8000/223997938108" target="_blank" rel="noopener">원본 포스팅 보기 →</a>
+      </article>
+
+      <article class="case">
+        <div class="case__head">
+          <h3 class="case__title">자취방 모던 인테리어 팁</h3>
+          <span class="case__badge">1위 3개</span>
+        </div>
+        <ul class="case__kw">
+          <li>자취방 모던 인테리어 <span class="rank rank--top">1위</span></li>
+          <li>자취방 모던 인테리어 가구추천 <span class="rank rank--top">1위</span></li>
+          <li>모던 인테리어 디자인 가구추천 <span class="rank rank--top">1위</span></li>
+          <li>모던 인테리어 가구추천 <span class="rank">2위</span></li>
+          <li>자취방 인테리어 가구추천 <span class="rank">3위</span></li>
+        </ul>
+        <a class="case__link" href="https://blog.naver.com/hoyoung8000/223997930047" target="_blank" rel="noopener">원본 포스팅 보기 →</a>
+      </article>
+
+      <article class="case">
+        <div class="case__head">
+          <h3 class="case__title">통뼈 감자탕 철거공사</h3>
+          <span class="case__badge">1위 2개</span>
+        </div>
+        <ul class="case__kw">
+          <li>창원 철거공사 업체 추천 <span class="rank rank--top">1위</span></li>
+          <li>창원 철거공사 업체 <span class="rank rank--top">1위</span></li>
+          <li>철거 공사 업체 추천 <span class="rank">2위</span></li>
+          <li>창원 철거공사 <span class="rank">3위</span></li>
+        </ul>
+        <a class="case__link" href="https://blog.naver.com/hoyoung8000/224022878295" target="_blank" rel="noopener">원본 포스팅 보기 →</a>
+      </article>
+
+      <article class="case">
+        <div class="case__head">
+          <h3 class="case__title">창원 실내골프연습장</h3>
+          <span class="case__badge">1위 3개</span>
+        </div>
+        <ul class="case__kw">
+          <li>창원 실내골프연습장 인테리어 <span class="rank rank--top">1위</span></li>
+          <li>창원 실내골프연습장 <span class="rank rank--top">1위</span></li>
+          <li>실내골프연습장 인테리어 <span class="rank rank--top">1위</span></li>
+          <li>골프연습장 인테리어 <span class="rank">3위</span></li>
+          <li>골프연습장 인테리어 시공 <span class="rank">3위</span></li>
+        </ul>
+        <a class="case__link" href="https://blog.naver.com/hoyoung8000/224023809858" target="_blank" rel="noopener">원본 포스팅 보기 →</a>
+      </article>
+
+      <article class="case">
+        <div class="case__head">
+          <h3 class="case__title">함안 사무실 인테리어</h3>
+          <span class="case__badge">전 키워드 1위급</span>
+        </div>
+        <ul class="case__kw">
+          <li>함안 사무실 인테리어 <span class="rank rank--top">1위</span></li>
+          <li>사무실 인테리어 잘하는 곳 <span class="rank rank--top">1위</span></li>
+          <li>함안 사무실 리모델링 <span class="rank rank--top">1위</span></li>
+          <li>함안 사무실 디자인 <span class="rank rank--top">1위</span></li>
+          <li>사무실 업무동선 <span class="rank rank--top">1위</span></li>
+        </ul>
+        <a class="case__link" href="https://blog.naver.com/hoyoung8000/224031904426" target="_blank" rel="noopener">원본 포스팅 보기 →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ FINAL CTA -->
+<section id="cta" class="section section--ink final">
+  <div class="wrap">
+    <span class="eyebrow reveal">🚀 START NOW</span>
+    <h2 class="h-section reveal">단순히 예쁘게 쓰는 글이 아닙니다.</h2>
+    <p class="lead reveal">검색에 걸리고, 문의로 이어지는 <strong class="hl">성과형 글쓰기</strong>입니다.</p>
+    <div class="final__phone reveal">010-7204-8009</div>
+    <div class="final__cta reveal">
+      <a class="btn btn--accent btn--xl" href="tel:01072048009">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+        지금 바로 전화 상담받기
+      </a>
+    </div>
+    <p class="final__last reveal">블로그 한 개로 고객이 먼저 찾아오는 변화,<br/>컨빌이 만들어드립니다.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================ FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <span class="brand__dot"></span>
+        컨빌디자인
+      </div>
+      <div class="footer__links">
+        <a href="https://www.youtube.com/@convil.interior/videos" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.instagram.com/convil.design/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://blog.naver.com/convil_interior" target="_blank" rel="noopener">Naver Blog</a>
+        <a href="tel:01072048009">📞 010-7204-8009</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      © 2026 컨빌디자인 · 시공사 전용 블로그 마케팅 대행. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================ STICKY CTA (mobile) -->
+<a class="sticky-cta" href="tel:01072048009" id="stickyCta" aria-label="전화 상담 010-7204-8009">
+  <div class="sticky-cta__num">
+    <small>지금 바로 상담받기</small>
+    010-7204-8009
+  </div>
+  <span class="sticky-cta__btn">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+    전화걸기
+  </span>
+</a>
+
+<script>
+(function(){
+  // Reveal-on-scroll
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target); }
+    });
+  },{ threshold:0.12 });
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  // Bar chart fill on first view
+  var chartEl = document.querySelector('.chart');
+  if(chartEl){
+    var bo = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          chartEl.querySelectorAll('.bar__fill').forEach(function(f){
+            f.style.width = (f.dataset.pct||100) + '%';
+          });
+          bo.disconnect();
+        }
+      });
+    },{threshold:0.4});
+    bo.observe(chartEl);
+  }
+
+  // Sticky CTA show after scrolling
+  var sticky = document.getElementById('stickyCta');
+  function onScroll(){
+    if(!sticky) return;
+    if(window.scrollY > 280) sticky.classList.add('is-on'); else sticky.classList.remove('is-on');
+  }
+  window.addEventListener('scroll', onScroll, { passive:true });
+  onScroll();
+
+  // Mobile drawer toggle
+  var burger = document.getElementById('navBurger');
+  var drawer = document.getElementById('navDrawer');
+  var burgerSvgOpen = '<line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/>';
+  var burgerSvgClose = '<line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/>';
+  function setDrawer(open){
+    if(!burger || !drawer) return;
+    if(open){
+      drawer.removeAttribute('hidden');
+      // double rAF to ensure transition fires
+      requestAnimationFrame(function(){ requestAnimationFrame(function(){ drawer.classList.add('is-open'); }); });
+      burger.setAttribute('aria-expanded','true');
+      burger.querySelector('svg').innerHTML = burgerSvgClose;
+    }else{
+      drawer.classList.remove('is-open');
+      burger.setAttribute('aria-expanded','false');
+      burger.querySelector('svg').innerHTML = burgerSvgOpen;
+      setTimeout(function(){ if(!drawer.classList.contains('is-open')) drawer.setAttribute('hidden',''); }, 220);
+    }
+  }
+  if(burger){
+    burger.addEventListener('click', function(){
+      setDrawer(!drawer.classList.contains('is-open'));
+    });
+  }
+  if(drawer){
+    drawer.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ setDrawer(false); });
+    });
+  }
+
+  // Active section highlight
+  var navLinks = document.querySelectorAll('[data-link]');
+  var sectionMap = {};
+  navLinks.forEach(function(a){
+    var id = a.getAttribute('href').slice(1);
+    var el = document.getElementById(id);
+    if(el) sectionMap[id] = el;
+  });
+  var sectionEls = Object.values(sectionMap);
+  if(sectionEls.length){
+    var activeId = null;
+    function setActive(id){
+      if(id === activeId) return;
+      activeId = id;
+      navLinks.forEach(function(a){
+        a.classList.toggle('is-active', a.getAttribute('href') === '#' + id);
+      });
+    }
+    var so = new IntersectionObserver(function(entries){
+      // Pick the entry whose top is closest to the nav line (72px from viewport top)
+      var visible = entries.filter(function(e){ return e.isIntersecting; });
+      if(visible.length){
+        visible.sort(function(a,b){ return Math.abs(a.boundingClientRect.top - 72) - Math.abs(b.boundingClientRect.top - 72); });
+        setActive(visible[0].target.id);
+      }
+    },{ rootMargin:'-72px 0px -55% 0px', threshold:[0, .2, .5, 1] });
+    sectionEls.forEach(function(el){ so.observe(el); });
+  }
+})();
+</script>
+
+</body>
+</html>
